@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ferramentas de IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Estilo adaptado para os blocos de prompts */
+      .code-block {
+        background-color: #2d3748;
+        color: #e2e8f0;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        font-family: "Courier New", Courier, monospace;
+        white-space: pre-wrap; /* Garante a quebra de linha nos prompts */
+        word-wrap: break-word; /* Garante que palavras longas não causem overflow */
+      }
+      h2 {
+        border-bottom: 2px solid #4a5568;
+        padding-bottom: 0.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .card {
+        background-color: #1a202c;
+        border: 1px solid #2d3748;
+      }
+      .command {
+        background-color: #2d3748;
+        color: #a0aec0;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-family: monospace;
+      }
+      /* Para a barra de scroll no menu lateral quando necessário */
+      .sidebar-scroll::-webkit-scrollbar {
+        width: 8px;
+      }
+      .sidebar-scroll::-webkit-scrollbar-track {
+        background: #2d3748;
+      }
+      .sidebar-scroll::-webkit-scrollbar-thumb {
+        background-color: #4a5568;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-300">
+    <div class="flex">
+      <!-- Menu Lateral de Navegação -->
+      <aside
+        class="w-64 h-screen sticky top-0 bg-gray-800 p-6 flex-shrink-0 hidden lg:flex flex-col sidebar-scroll overflow-y-auto"
+      >
+        <h3 class="text-xl font-bold text-white mb-6">Secções</h3>
+        <nav>
+          <ul class="space-y-3">
+            <li>
+              <a
+                href="#intro"
+                class="block text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded transition-colors duration-200"
+                >Introdução</a
+              >
+            </li>
+            <li>
+              <a
+                href="#principais-chats"
+                class="block text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded transition-colors duration-200"
+                >Principais Chats</a
+              >
+            </li>
+            <li>
+              <a
+                href="#prompt-templates"
+                class="block text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded transition-colors duration-200"
+                >Templates de Prompts</a
+              >
+            </li>
+            <li>
+              <a
+                href="#dev-prompts"
+                class="block text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded transition-colors duration-200"
+                >Prompts de Programação</a
+              >
+            </li>
+            <li>
+              <a
+                href="#ai-tools"
+                class="block text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded transition-colors duration-200"
+                >Ferramentas de IA</a
+              >
+            </li>
+            <li>
+              <a
+                href="#image-video-tools"
+                class="block text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded transition-colors duration-200"
+                >Imagem e Vídeo</a
+              >
+            </li>
+            <li>
+              <a
+                href="#learning-resources"
+                class="block text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded transition-colors duration-200"
+                >Recursos de Aprendizagem</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Conteúdo Principal -->
+      <div class="flex-1 min-w-0">
+        <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+          <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+              🛠️ Ferramentas de IA
+            </h1>
+            <p class="text-lg text-gray-400">
+              Uma coleção pessoal de prompts e recursos para otimizar o trabalho
+              com Inteligência Artificial.
+            </p>
+          </header>
+
+          <main>
+            <!-- Introdução -->
+            <section id="intro" class="mb-12">
+              <div class="card p-8 rounded-lg">
+                <p>
+                  Esta página serve como o meu repositório central para guardar
+                  os prompts mais eficazes, links para ferramentas úteis e
+                  outros recursos relacionados com Inteligência Artificial. O
+                  objetivo é ter um acesso rápido e organizado a materiais que
+                  apoiam os meus estudos em engenharia de prompts e
+                  desenvolvimento web.
+                </p>
+              </div>
+            </section>
+
+            <!-- Principais Chats de IA -->
+            <section id="principais-chats" class="mb-12">
+              <h2 class="text-3xl font-bold text-white">
+                Principais Chats de IA
+              </h2>
+              <div class="card p-8 rounded-lg">
+                <ul class="list-disc list-inside space-y-3">
+                  <li>
+                    <strong class="text-white">Google Gemini:</strong>
+                    <a
+                      href="https://gemini.google.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://gemini.google.com/</a
+                    >
+                  </li>
+                  <li>
+                    <strong class="text-white">OpenAI ChatGPT:</strong>
+                    <a
+                      href="https://chat.openai.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://chat.openai.com/</a
+                    >
+                  </li>
+                  <li>
+                    <strong class="text-white">Meta AI:</strong>
+                    <a
+                      href="https://www.meta.ai/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://www.meta.ai/</a
+                    >
+                  </li>
+                  <li>
+                    <strong class="text-white">Mistral (Le Chat):</strong>
+                    <a
+                      href="https://chat.mistral.ai/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://chat.mistral.ai/</a
+                    >
+                  </li>
+                  <li>
+                    <strong class="text-white">Grok (X AI):</strong>
+                    <a
+                      href="https://grok.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://grok.com/</a
+                    >
+                  </li>
+                  <li>
+                    <strong class="text-white">Perplexity:</strong>
+                    <a
+                      href="https://www.perplexity.ai/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://www.perplexity.ai/</a
+                    >
+                  </li>
+                  <li>
+                    <strong class="text-white">Anthropic Claude:</strong>
+                    <a
+                      href="https://claude.ai/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://claude.ai/</a
+                    >
+                  </li>
+                  <li>
+                    <strong class="text-white">Alibaba Qwen:</strong>
+                    <a
+                      href="https://chat.qwen.ai/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://chat.qwen.ai/</a
+                    >
+                  </li>
+                  <li>
+                    <strong class="text-white">Microsoft Copilot:</strong>
+                    <a
+                      href="https://copilot.microsoft.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://copilot.microsoft.com/</a
+                    >
+                  </li>
+                  <li>
+                    <strong class="text-white">DeepSeek:</strong>
+                    <a
+                      href="https://chat.deepseek.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://chat.deepseek.com/</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Templates de Prompts -->
+            <section id="prompt-templates" class="mb-12">
+              <h2 class="text-3xl font-bold text-white">
+                Templates de Engenharia de Prompts
+              </h2>
+              <div class="card p-8 rounded-lg space-y-8">
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-4">
+                    Prompt para Otimizar Outros Prompts
+                  </h3>
+                  <p class="mb-4 text-gray-400">
+                    Use este modelo para analisar e reescrever um prompt
+                    existente, tornando-o mais claro, específico e eficaz.
+                  </p>
+                  <pre class="code-block">
+ROLE
+És um engenheiro de prompts de classe mundial, especialista em otimizar instruções para LLMs como o Gemini e o Claude. A tua função é avaliar criticamente um prompt e reescrevê-lo para máxima clareza, especificidade e eficácia.
+
+TASK
+1. Analisa o "Prompt Original" abaixo.
+2. Identifica os seus pontos fortes e fracos.
+3. Reescreve o prompt, criando uma "Versão Otimizada" que seja significativamente melhor.
+
+Prompt Original:
+"""
+[COLE AQUI O PROMPT QUE QUER MELHORAR]
+"""
+
+OUTPUT FORMAT
+Apresenta a tua resposta em três secções claras:
+1. Pontos Fortes: O que o prompt original faz bem.
+2. Pontos a Melhorar: Onde o prompt falha em especificidade, contexto ou clareza.
+3. Versão Otimizada: A nova versão do prompt.</pre
+                  >
+                </div>
+
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-4">
+                    Prompt de Persona
+                  </h3>
+                  <p class="mb-4 text-gray-400">
+                    Use este modelo para instruir a IA a adotar uma persona
+                    específica, melhorando a relevância e o estilo da resposta.
+                  </p>
+                  <pre class="code-block">
+Aja como um [PROFISSÃO OU ESPECIALISTA], por exemplo, um programador sénior especialista em Python e Docker.
+A sua tarefa é [DESCREVA A TAREFA PRINCIPAL], por exemplo, analisar o meu código e sugerir melhorias.
+O seu público-alvo é [PÚBLICO-ALVO], por exemplo, um programador júnior com conhecimentos básicos de Linux.
+O tom da sua resposta deve ser [TOM DESEJADO], por exemplo, amigável, pedagógico e profissional.
+Use exemplos práticos para ilustrar os seus pontos.
+Não use [ELEMENTOS A EVITAR], por exemplo, jargão demasiado complexo sem explicação.</pre
+                  >
+                </div>
+
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-4">
+                    Prompt para Resumir Texto
+                  </h3>
+                  <p class="mb-4 text-gray-400">
+                    Ideal para extrair as ideias principais de um artigo ou
+                    documento.
+                  </p>
+                  <pre class="code-block">
+Resume o seguinte texto em 5 pontos principais (bullet points).
+Cada ponto deve ser conciso e direto.
+O objetivo é captar as ideias centrais para alguém que não tem tempo de ler o texto completo.
+
+Texto a resumir:
+"""
+[COLE O TEXTO AQUI]
+"""</pre
+                  >
+                </div>
+
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-4">
+                    Prompt para Geração de Artigos
+                  </h3>
+                  <p class="mb-4 text-gray-400">
+                    Um modelo completo para gerar artigos personalizados,
+                    definindo tópico, público e objetivo.
+                  </p>
+                  <pre class="code-block">
+Você é um especialista em criação de conteúdo. Siga os seguintes passos:
+
+ETAPA 1 – COLETA DE DADOS
+
+Solicite as seguintes três informações ao usuário:
+1. Tópico – Tema central do artigo.
+2. Público-alvo – Quem vai ler o artigo? Ex: estudantes, empreendedores, etc.
+3. Objetivo – O que o artigo deve fazer? Informar, ensinar, convencer, etc.
+
+ETAPA 2 – ESTRUTURA DO ARTIGO
+
+Com base nas informações, gere um artigo com:
+- Título claro
+- Introdução (tema, interesse, objetivo)
+- Desenvolvimento (parágrafos organizados, subtítulos, exemplos)
+- Conclusão (retomar pontos, reforçar objetivo, chamada para ação)
+- Extensão: entre 800 e 1200 palavras.
+
+ETAPA 3 – AJUSTE DE LINGUAGEM
+
+Adapte a linguagem ao público-alvo:
+- Estudantes: Clara, explicativa, com exemplos.
+- Profissionais iniciantes: Didática, com analogias.
+- Executivos: Direta, objetiva, com dados.
+- Leitores leigos: Acessível, sem jargões.
+
+ETAPA 4 – FORMATAÇÃO DO TEXTO
+
+- Use títulos e subtítulos claros.
+- Divida em parágrafos curtos.
+- Utilize bullet points quando útil.
+- Escreva com originalidade e evite repetições.</pre
+                  >
+                </div>
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-4">
+                    Prompt para Gerar Prompts de Trabalho
+                  </h3>
+                  <p class="mb-4 text-gray-400">
+                    Um modelo interativo para que a IA ajude a criar prompts
+                    personalizados para as suas tarefas profissionais.
+                  </p>
+                  <pre class="code-block">
+# Persona
+Atue como um Engenheiro de Prompts experiente.
+
+# Tarefa
+Criar 5 prompts de alta qualidade, importantes para meu trabalho.
+
+## Instruções
+1. Faça 5 perguntas para entender o que eu faço e que sejam relevantes para a criação de prompts.
+2. Me pergunte sobre possíveis aplicações de LLMs no meu trabalho.
+3. Escreva 5 prompts detalhados usando markdown e em janelas de código independentes.
+
+# Verificação
+Se você entendeu a tarefa, escreva "Entendi" e comece com a primeira pergunta.
+## IMPORTANTE: Faça uma pergunta de cada vez. Só faça uma nova pergunta após receber a minha resposta</pre
+                  >
+                </div>
+              </div>
+            </section>
+
+            <!-- Prompts de Programação -->
+            <section id="dev-prompts" class="mb-12">
+              <h2 class="text-3xl font-bold text-white">
+                Prompts para Desenvolvimento e Programação
+              </h2>
+              <div class="card p-8 rounded-lg space-y-8">
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-4">
+                    Explicar Bloco de Código
+                  </h3>
+                  <p class="mb-4 text-gray-400">
+                    Perfeito para quando encontra um código que não compreende
+                    totalmente.
+                  </p>
+                  <pre class="code-block">
+Aja como um professor de programação. Explique o seguinte bloco de código [LINGUAGEM, ex: PHP] linha por linha.
+Descreva o que cada parte faz e qual o propósito geral da função/script.
+No final, dê um exemplo prático de como este código poderia ser utilizado.
+
+Código:
+```php
+[COLE O CÓDIGO AQUI]
+```</pre
+                  >
+                </div>
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-4">
+                    Gerar Código com Requisitos
+                  </h3>
+                  <p class="mb-4 text-gray-400">
+                    Use para criar snippets de código baseados em necessidades
+                    específicas.
+                  </p>
+                  <pre class="code-block">
+Escreva uma função em [LINGUAGEM, ex: JavaScript] que faça o seguinte:
+1.  Receba um [TIPO DE INPUT, ex: array de números] como argumento.
+2.  [REQUISITO 1, ex: Calcule a média de todos os números].
+3.  [REQUISITO 2, ex: Retorne 0 se o array estiver vazio].
+4.  Adicione comentários ao código para explicar a lógica.
+5.  O código deve seguir as boas práticas da linguagem.</pre
+                  >
+                </div>
+              </div>
+            </section>
+
+            <!-- Ferramentas de IA -->
+            <section id="ai-tools" class="mb-12">
+              <h2 class="text-3xl font-bold text-white">Ferramentas de IA</h2>
+              <div class="card p-8 rounded-lg">
+                <ul class="list-disc list-inside space-y-3">
+                  <li>
+                    <strong class="text-white">ChatHub:</strong>
+                    <a
+                      href="https://chathub.gg/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://chathub.gg/</a
+                    >
+                    - Cliente "tudo-em-um" para usar vários chatbots na mesma
+                    interface.
+                  </li>
+                  <li>
+                    <strong class="text-white">You.com:</strong>
+                    <a
+                      href="https://you.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://you.com/</a
+                    >
+                    - Motor de busca conversacional que combina pesquisa web com
+                    um chatbot de IA.
+                  </li>
+                  <li>
+                    <strong class="text-white">Straico:</strong>
+                    <a
+                      href="https://platform.straico.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://platform.straico.com/</a
+                    >
+                    - Plataforma para criar e gerir agentes de IA e automatizar
+                    fluxos de trabalho.
+                  </li>
+                  <li>
+                    <strong class="text-white">Poe:</strong>
+                    <a
+                      href="https://poe.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://poe.com/</a
+                    >
+                    - Agregador que permite o acesso a uma vasta gama de
+                    chatbots de diferentes empresas.
+                  </li>
+                  <li>
+                    <strong class="text-white">GitHub Copilot:</strong>
+                    <a
+                      href="https://github.com/features/copilot"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://github.com/features/copilot</a
+                    >
+                    - Assistente de código baseado em IA para programadores.
+                  </li>
+                  <li>
+                    <strong class="text-white">Vertex AI Studio:</strong>
+                    <a
+                      href="https://console.cloud.google.com/vertex-ai/studio/multimodal"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://console.cloud.google.com/vertex-ai/studio/multimodal</a
+                    >
+                    - Plataforma da Google Cloud para construir e treinar
+                    modelos de IA.
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- Ferramentas de Imagem e Vídeo -->
+            <section id="image-video-tools" class="mb-12">
+              <h2 class="text-3xl font-bold text-white">
+                Ferramentas de Imagem e Vídeo
+              </h2>
+              <div class="card p-8 rounded-lg">
+                <ul class="list-disc list-inside space-y-3">
+                  <li>
+                    <strong class="text-white">Midjourney:</strong>
+                    <a
+                      href="https://www.midjourney.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://www.midjourney.com/</a
+                    >
+                    - Ferramenta de geração de imagens de alta qualidade a
+                    partir de texto, focada em resultados artísticos.
+                  </li>
+                  <li>
+                    <strong class="text-white">DALL-E 3 (OpenAI):</strong>
+                    <a
+                      href="https://openai.com/dall-e-3"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://openai.com/dall-e-3</a
+                    >
+                    - Modelo da OpenAI, conhecido pela sua capacidade de
+                    compreender prompts complexos.
+                  </li>
+                  <li>
+                    <strong class="text-white">Stable Diffusion:</strong>
+                    <a
+                      href="https://stability.ai/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://stability.ai/</a
+                    >
+                    - Modelo de código aberto para geração de imagens, com uma
+                    vasta comunidade e muitas interfaces.
+                  </li>
+                  <li>
+                    <strong class="text-white">Leonardo.Ai:</strong>
+                    <a
+                      href="https://leonardo.ai/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://leonardo.ai/</a
+                    >
+                    - Plataforma completa para geração de assets para jogos,
+                    arte conceptual e outras imagens.
+                  </li>
+                  <li>
+                    <strong class="text-white">Runway:</strong>
+                    <a
+                      href="https://runwayml.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://runwayml.com/</a
+                    >
+                    - Suite de ferramentas de IA para edição e geração de vídeo
+                    a partir de texto (Gen-2).
+                  </li>
+                  <li>
+                    <strong class="text-white">Pika:</strong>
+                    <a
+                      href="https://pika.art/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://pika.art/</a
+                    >
+                    - Ferramenta focada na geração e edição de vídeo a partir de
+                    texto e imagens.
+                  </li>
+                </ul>
+                <div class="mt-6 pt-6 border-t border-gray-700">
+                  <h4 class="text-xl font-semibold text-white mb-3">
+                    Experimentais (Google Labs)
+                  </h4>
+                  <ul class="list-disc list-inside space-y-3">
+                    <li>
+                      <strong class="text-white">FX Flow:</strong>
+                      <a
+                        href="https://labs.google/fx/pt/tools/flow"
+                        target="_blank"
+                        class="text-blue-400 hover:underline ml-2"
+                        >https://labs.google/fx/pt/tools/flow</a
+                      >
+                      - Ferramenta para criar efeitos visuais em imagens a
+                      partir de prompts de texto.
+                    </li>
+                    <li>
+                      <strong class="text-white">FX Whisk:</strong>
+                      <a
+                        href="https://labs.google/fx/pt/tools/whisk"
+                        target="_blank"
+                        class="text-blue-400 hover:underline ml-2"
+                        >https://labs.google/fx/pt/tools/whisk</a
+                      >
+                      - Ferramenta para gerar imagens a partir de um esboço
+                      (desenho).
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <!-- Recursos de Aprendizagem -->
+            <section id="learning-resources" class="mb-12">
+              <h2 class="text-3xl font-bold text-white">
+                Recursos de Aprendizagem
+              </h2>
+              <div class="card p-8 rounded-lg">
+                <ul class="list-disc list-inside space-y-3">
+                  <li>
+                    <strong class="text-white">Udemy:</strong>
+                    <a
+                      href="https://www.udemy.com/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://www.udemy.com/</a
+                    >
+                    - Plataforma com diversos cursos de IA e programação.
+                  </li>
+                  <li>
+                    <strong class="text-white"
+                      >Prompt Engineering Guide:</strong
+                    >
+                    <a
+                      href="https://www.promptingguide.ai/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://www.promptingguide.ai/</a
+                    >
+                    - Guia completo e gratuito sobre engenharia de prompts.
+                  </li>
+                  <li>
+                    <strong class="text-white">freeCodeCamp:</strong>
+                    <a
+                      href="https://www.freecodecamp.org/"
+                      target="_blank"
+                      class="text-blue-400 hover:underline ml-2"
+                      >https://www.freecodecamp.org/</a
+                    >
+                    - Tutoriais e cursos gratuitos de desenvolvimento web.
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </main>
+
+          <footer class="text-center mt-12 pt-8 border-t border-gray-700">
+            <p class="text-gray-500">
+              Página criada para centralizar estudos e ferramentas de IA.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
