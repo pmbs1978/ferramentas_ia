@@ -23,6 +23,7 @@
         font-family: "Courier New", Courier, monospace;
         white-space: pre-wrap; /* Garante a quebra de linha nos prompts */
         word-wrap: break-word; /* Garante que palavras longas não causem overflow */
+        padding-top: 3.5rem; /* Adiciona espaço no topo para o botão não sobrepor o texto */
       }
       h2 {
         border-bottom: 2px solid #4a5568;
@@ -259,7 +260,29 @@
                     Use este modelo para analisar e reescrever um prompt
                     existente, tornando-o mais claro, específico e eficaz.
                   </p>
-                  <pre class="code-block">
+                  <div class="relative">
+                    <button
+                      onclick="copyToClipboard(this)"
+                      class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-1 rounded-md text-sm transition-colors duration-200 flex items-center z-10"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-clipboard mr-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                        />
+                        <path
+                          d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                        />
+                      </svg>
+                      <span>Copiar</span>
+                    </button>
+                    <pre class="code-block">
 ROLE
 És um engenheiro de prompts de classe mundial, especialista em otimizar instruções para LLMs como o Gemini e o Claude. A tua função é avaliar criticamente um prompt e reescrevê-lo para máxima clareza, especificidade e eficácia.
 
@@ -278,7 +301,8 @@ Apresenta a tua resposta em três secções claras:
 1. Pontos Fortes: O que o prompt original faz bem.
 2. Pontos a Melhorar: Onde o prompt falha em especificidade, contexto ou clareza.
 3. Versão Otimizada: A nova versão do prompt.</pre
-                  >
+                    >
+                  </div>
                 </div>
 
                 <div>
@@ -289,14 +313,37 @@ Apresenta a tua resposta em três secções claras:
                     Use este modelo para instruir a IA a adotar uma persona
                     específica, melhorando a relevância e o estilo da resposta.
                   </p>
-                  <pre class="code-block">
+                  <div class="relative">
+                    <button
+                      onclick="copyToClipboard(this)"
+                      class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-1 rounded-md text-sm transition-colors duration-200 flex items-center z-10"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-clipboard mr-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                        />
+                        <path
+                          d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                        />
+                      </svg>
+                      <span>Copiar</span>
+                    </button>
+                    <pre class="code-block">
 Aja como um [PROFISSÃO OU ESPECIALISTA], por exemplo, um programador sénior especialista em Python e Docker.
 A sua tarefa é [DESCREVA A TAREFA PRINCIPAL], por exemplo, analisar o meu código e sugerir melhorias.
 O seu público-alvo é [PÚBLICO-ALVO], por exemplo, um programador júnior com conhecimentos básicos de Linux.
 O tom da sua resposta deve ser [TOM DESEJADO], por exemplo, amigável, pedagógico e profissional.
 Use exemplos práticos para ilustrar os seus pontos.
 Não use [ELEMENTOS A EVITAR], por exemplo, jargão demasiado complexo sem explicação.</pre
-                  >
+                    >
+                  </div>
                 </div>
 
                 <div>
@@ -307,7 +354,29 @@ Não use [ELEMENTOS A EVITAR], por exemplo, jargão demasiado complexo sem expli
                     Ideal para extrair as ideias principais de um artigo ou
                     documento.
                   </p>
-                  <pre class="code-block">
+                  <div class="relative">
+                    <button
+                      onclick="copyToClipboard(this)"
+                      class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-1 rounded-md text-sm transition-colors duration-200 flex items-center z-10"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-clipboard mr-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                        />
+                        <path
+                          d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                        />
+                      </svg>
+                      <span>Copiar</span>
+                    </button>
+                    <pre class="code-block">
 Resume o seguinte texto em 5 pontos principais (bullet points).
 Cada ponto deve ser conciso e direto.
 O objetivo é captar as ideias centrais para alguém que não tem tempo de ler o texto completo.
@@ -316,7 +385,8 @@ Texto a resumir:
 """
 [COLE O TEXTO AQUI]
 """</pre
-                  >
+                    >
+                  </div>
                 </div>
 
                 <div>
@@ -327,7 +397,29 @@ Texto a resumir:
                     Um modelo completo para gerar artigos personalizados,
                     definindo tópico, público e objetivo.
                   </p>
-                  <pre class="code-block">
+                  <div class="relative">
+                    <button
+                      onclick="copyToClipboard(this)"
+                      class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-1 rounded-md text-sm transition-colors duration-200 flex items-center z-10"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-clipboard mr-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                        />
+                        <path
+                          d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                        />
+                      </svg>
+                      <span>Copiar</span>
+                    </button>
+                    <pre class="code-block">
 Você é um especialista em criação de conteúdo. Siga os seguintes passos:
 
 ETAPA 1 – COLETA DE DADOS
@@ -360,7 +452,8 @@ ETAPA 4 – FORMATAÇÃO DO TEXTO
 - Divida em parágrafos curtos.
 - Utilize bullet points quando útil.
 - Escreva com originalidade e evite repetições.</pre
-                  >
+                    >
+                  </div>
                 </div>
                 <div>
                   <h3 class="text-2xl font-semibold text-white mb-4">
@@ -370,7 +463,29 @@ ETAPA 4 – FORMATAÇÃO DO TEXTO
                     Um modelo interativo para que a IA ajude a criar prompts
                     personalizados para as suas tarefas profissionais.
                   </p>
-                  <pre class="code-block">
+                  <div class="relative">
+                    <button
+                      onclick="copyToClipboard(this)"
+                      class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-1 rounded-md text-sm transition-colors duration-200 flex items-center z-10"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-clipboard mr-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                        />
+                        <path
+                          d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                        />
+                      </svg>
+                      <span>Copiar</span>
+                    </button>
+                    <pre class="code-block">
 # Persona
 Atue como um Engenheiro de Prompts experiente.
 
@@ -385,7 +500,8 @@ Criar 5 prompts de alta qualidade, importantes para meu trabalho.
 # Verificação
 Se você entendeu a tarefa, escreva "Entendi" e comece com a primeira pergunta.
 ## IMPORTANTE: Faça uma pergunta de cada vez. Só faça uma nova pergunta após receber a minha resposta</pre
-                  >
+                    >
+                  </div>
                 </div>
                 <div>
                   <h3 class="text-2xl font-semibold text-white mb-4">
@@ -396,13 +512,36 @@ Se você entendeu a tarefa, escreva "Entendi" e comece com a primeira pergunta.
                     exatamente como foi fornecido, sem qualquer alteração, ideal
                     para preservar formatação e conteúdo original.
                   </p>
-                  <pre class="code-block">
+                  <div class="relative">
+                    <button
+                      onclick="copyToClipboard(this)"
+                      class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-1 rounded-md text-sm transition-colors duration-200 flex items-center z-10"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-clipboard mr-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                        />
+                        <path
+                          d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                        />
+                      </svg>
+                      <span>Copiar</span>
+                    </button>
+                    <pre class="code-block">
 ## Instruções
 Copia e devolve o texto exatamente como eu enviar, sem resumir, sem cortar e sem alterar nada. 
 O texto deve ser devolvido palavra por palavra, na mesma ordem, com a mesma formatação, incluindo quebras de linha, espaços e pontuação. 
 Não faças comentários, não faças interpretações, não expliques nada. 
 Apenas devolve o texto integral dentro de um bloco de código (``` … ```).</pre
-                  >
+                    >
+                  </div>
                 </div>
               </div>
             </section>
@@ -421,16 +560,39 @@ Apenas devolve o texto integral dentro de um bloco de código (``` … ```).</pr
                     Perfeito para quando encontra um código que não compreende
                     totalmente.
                   </p>
-                  <pre class="code-block">
+                  <div class="relative">
+                    <button
+                      onclick="copyToClipboard(this)"
+                      class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-1 rounded-md text-sm transition-colors duration-200 flex items-center z-10"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-clipboard mr-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                        />
+                        <path
+                          d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                        />
+                      </svg>
+                      <span>Copiar</span>
+                    </button>
+                    <pre class="code-block">
 Aja como um professor de programação. Explique o seguinte bloco de código [LINGUAGEM, ex: PHP] linha por linha.
 Descreva o que cada parte faz e qual o propósito geral da função/script.
 No final, dê um exemplo prático de como este código poderia ser utilizado.
 
 Código:
 ```php
-[COLE O CÓDIGO AQUI]
+[COLE O CÓDGIGO AQUI]
 ```</pre
-                  >
+                    >
+                  </div>
                 </div>
                 <div>
                   <h3 class="text-2xl font-semibold text-white mb-4">
@@ -440,14 +602,37 @@ Código:
                     Use para criar snippets de código baseados em necessidades
                     específicas.
                   </p>
-                  <pre class="code-block">
+                  <div class="relative">
+                    <button
+                      onclick="copyToClipboard(this)"
+                      class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-gray-300 px-3 py-1 rounded-md text-sm transition-colors duration-200 flex items-center z-10"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-clipboard mr-2"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+                        />
+                        <path
+                          d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+                        />
+                      </svg>
+                      <span>Copiar</span>
+                    </button>
+                    <pre class="code-block">
 Escreva uma função em [LINGUAGEM, ex: JavaScript] que faça o seguinte:
 1.  Receba um [TIPO DE INPUT, ex: array de números] como argumento.
 2.  [REQUISITO 1, ex: Calcule a média de todos os números].
 3.  [REQUISITO 2, ex: Retorne 0 se o array estiver vazio].
 4.  Adicione comentários ao código para explicar a lógica.
 5.  O código deve seguir as boas práticas da linguagem.</pre
-                  >
+                    >
+                  </div>
                 </div>
               </div>
             </section>
@@ -684,5 +869,37 @@ Escreva uma função em [LINGUAGEM, ex: JavaScript] que faça o seguinte:
         </div>
       </div>
     </div>
+    <script>
+      function copyToClipboard(button) {
+        const preElement = button.nextElementSibling;
+        const textToCopy = preElement.innerText;
+
+        const textArea = document.createElement("textarea");
+        textArea.value = textToCopy;
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+          document.execCommand("copy");
+          const originalText = button.querySelector("span").innerText;
+          const originalIcon = button.querySelector("svg").innerHTML;
+
+          button.querySelector("span").innerText = "Copiado!";
+          button.querySelector(
+            "svg"
+          ).innerHTML = `<path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022z"/>`;
+
+          setTimeout(() => {
+            button.querySelector("span").innerText = originalText;
+            button.querySelector("svg").innerHTML = originalIcon;
+          }, 2000);
+        } catch (err) {
+          console.error("Falha ao copiar texto: ", err);
+          alert("Ocorreu um erro ao tentar copiar o texto.");
+        } finally {
+          document.body.removeChild(textArea);
+        }
+      }
+    </script>
   </body>
 </html>
